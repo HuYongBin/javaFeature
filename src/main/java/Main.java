@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
+import java.util.function.BiConsumer;
 
 /**
  * Created by HuYongBin on 2014/12/5.
@@ -9,7 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     public static void main(String[] args) {
-
+//        lambde表达式中使用var,可加annotation。paramters必须统一加var
+//        BiConsumer<String, String> consumer = (@NotNull var x, @Nullable var y) -> x.process(y);
         List<String> values = makeData();
         long t0 = System.nanoTime();
         long count = values.stream().sorted().count();
